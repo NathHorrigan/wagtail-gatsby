@@ -2,7 +2,7 @@ from os import path
 
 from setuptools import find_packages, setup
 
-from wagtail_headless_preview import __version__
+from wagtail_gatsby import __version__
 
 
 this_directory = path.abspath(path.dirname(__file__))
