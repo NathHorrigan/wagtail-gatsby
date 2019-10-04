@@ -2,9 +2,6 @@ from os import path
 
 from setuptools import find_packages, setup
 
-from wagtail_gatsby import __version__
-
-
 this_directory = path.abspath(path.dirname(__file__))
 with open(path.join(this_directory, "README.md"), encoding="utf-8") as f:
     long_description = f.read()
@@ -12,7 +9,7 @@ with open(path.join(this_directory, "README.md"), encoding="utf-8") as f:
 
 setup(
     name="wagtail-gatsby",
-    version=__version__,
+    version="0.1.0",
     packages=find_packages(),
     include_package_data=True,
     description="Plugin to enable support for gatsby-source-wagtail.",

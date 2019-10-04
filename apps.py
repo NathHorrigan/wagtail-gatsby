@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class Gatsby(AppConfig):
-    name = "wagtail-gatsby"
+class WagtailGatsby(AppConfig):
+    name = "wagtail_gatsby"

@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: wagtail-gatsby
+Version: 0.1.0
+Summary: Plugin to enable support for gatsby-source-wagtail.
+Home-page: https://github.com/nathhorrigan/wagtail-gatsby
+Author: Nathan Horrigan
+Author-email: Nathan.Horrigan@torchbox.com
+License: BSD
+Description: # Wagtail Gatsby
+        
+        > Beta, README coming soon.
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Framework :: Wagtail
+Classifier: Framework :: Wagtail :: 2
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Description-Content-Type: text/markdown
