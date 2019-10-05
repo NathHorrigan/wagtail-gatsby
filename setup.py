@@ -8,7 +8,7 @@ with open(path.join(this_directory, "README.md"), encoding="utf-8") as f:
 
 
 setup(
-    name="wagtail-gatsby",
+    name="wagtail_gatsby",
     version="0.1.0",
     packages=find_packages(),
     include_package_data=True,
