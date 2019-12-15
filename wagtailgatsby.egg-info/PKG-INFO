@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: wagtailgatsby
+Version: 0.0.1
+Summary: A django app that implements gatsby support to Wagtail models
+Home-page: https://github.com/nathhorrigan/wagtail-gatsby
+Author: Nathan Horrigan
+Author-email: NathHorrigan@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: wagtail,django,graphene,graphql
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >= 3.6
+Description-Content-Type: text/markdown

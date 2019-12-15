@@ -1,0 +1,15 @@
+setup.cfg
+setup.py
+wagtailgatsby/__init__.py
+wagtailgatsby/apps.py
+wagtailgatsby/models.py
+wagtailgatsby/wagtail_hooks.py
+wagtailgatsby.egg-info/PKG-INFO
+wagtailgatsby.egg-info/SOURCES.txt
+wagtailgatsby.egg-info/dependency_links.txt
+wagtailgatsby.egg-info/requires.txt
+wagtailgatsby.egg-info/top_level.txt
+wagtailgatsby/migrations/0001_initial.py
+wagtailgatsby/migrations/0002_gatsbyimage_gatsbyimagerendition.py
+wagtailgatsby/migrations/0003_auto_20190807_1031.py
+wagtailgatsby/migrations/__init__.py
