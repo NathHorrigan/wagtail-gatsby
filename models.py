@@ -1,15 +1,17 @@
-import os
-import requests
-import urllib.parse
 import base64
+import os
 import tempfile
-from django.core.files.storage import default_storage as storage
+import urllib.parse
+
 from django.conf import settings
+from django.core.files.storage import default_storage as storage
 from django.db import models
 from django.utils import timezone
-from django.utils.functional import cached_property
+
 from wagtail.images.models import AbstractImage, AbstractRendition, Image
-from grapple.models import GraphQLString, GraphQLImage
+
+import requests
+from grapple.models import GraphQLImage, GraphQLString
 from PIL import Image as PILImage
 
 
@@ -30,7 +32,7 @@ class GatsbyImage(AbstractImage):
             from grapple.models import GraphQLString
 
             self.graphql_fields = GraphQLString("traced_SVG")
-        except:
+        except:  # noqa
             pass
 
     def save(self, *args, **kwargs):
@@ -57,8 +59,9 @@ class GatsbyImage(AbstractImage):
 
         # Access file via local or from S3
         file_object = storage.open(self.file.name)
-        img = open(original_file, "wb")
+        img = open(original_file, "wb+")
         img.write(file_object.file.read())
+        img.close()
 
         # Capture colors from original image to color generated SVG.
         color_thief = ColorThief(original_file)
@@ -88,7 +91,8 @@ class GatsbyImage(AbstractImage):
         )
 
         # Write final output to Django field
-        svg = open(out_svg, "r")
+        svg = open(out_svg, "rb")
+
         svg_filename = (
             settings.BASE_DIR + os.path.splitext(self.file.url)[0] + "-traced.svg"
         )
@@ -103,7 +107,7 @@ class GatsbyImage(AbstractImage):
                 svg_file = storage.open(self.traced_SVG_image.name)
                 svg_file_data = svg_file.file.read()
                 svg_string = "data:image/svg+xml," + urllib.parse.quote(svg_file_data)
-            except:
+            except:  # noqa
                 pass
 
         return svg_string
@@ -119,7 +123,7 @@ class GatsbyImage(AbstractImage):
             encoded_string = base64.b64encode(image_buffer.getvalue())
 
             return "data:image/%s;base64,%s" % (image.format, encoded_string)
-        except:
+        except:  # noqa
             return ""
 
     admin_form_fields = Image.admin_form_fields
@@ -163,4 +167,7 @@ class Deployment(models.Model):
 
 def deploy():
     if hasattr(settings, "GATSBY_TRIGGER_URL"):
-        requests.post(settings.GATSBY_TRIGGER_URL)
+        try:
+            requests.post(settings.GATSBY_TRIGGER_URL)
+        except:
+            pass
