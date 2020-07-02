@@ -5,6 +5,31 @@ Wagatil Gatsby is an **experimental** library for intergrating Gatsby and Wagtai
 - Creates a ModelAdmin that allows you to manually deploy to your frontend host.
 - Gatsby Image processing (Now Deprecated, Please see [gatsby-source-wagatil's](https://github.com/NathHorrigan/gatsby-source-wagtail) repo on local image processing).
 
+## Install
+
+- Install package via PIP:
+
+```
+https://pypi.org/project/wagtailgatsby/
+```
+
+
+- Add to `INSTALLED_APPS`:
+
+```
+INSTALLED_APPS = [
+  ...
+  "wagtail_gatsby",
+  ...
+]
+```
+
+- Run Django Migrations:
+
+```
+python ./manage.py migrate
+```
+
 ### Publishing Triggers
 
 To have your frontend triggered when a pageis published inside of Wagtail add the following to your `base.py`
