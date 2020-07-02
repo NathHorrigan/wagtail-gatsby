@@ -5,7 +5,7 @@ Wagatil Gatsby is an **experimental** library for intergrating Gatsby and Wagtai
 - Creates a ModelAdmin that allows you to manually deploy to your frontend host.
 - Gatsby Image processing (Now Deprecated, Please see [gatsby-source-wagatil's](https://github.com/NathHorrigan/gatsby-source-wagtail) repo on local image processing).
 
-## Install
+### Install
 
 - Install package via PIP:
 
